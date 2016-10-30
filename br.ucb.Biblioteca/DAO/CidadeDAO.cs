@@ -19,7 +19,7 @@ namespace br.ucb.Biblioteca.DAO
             {
                 try{
                     conn.Open();
-                    var sql = "SELECT Id, DescCidade FROM Cidades WHERE IdEstado = @IdEstado";
+                    var sql = "SELECT IdCidade, DescCidade FROM Cidades WHERE IdEstado = @IdEstado";
                     SqlCommand command = new SqlCommand(sql, conn);
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@IdEstado", dto.idEstado);

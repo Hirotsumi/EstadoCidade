@@ -4,11 +4,11 @@
 
     <div class="jumbotron">
         <asp:Label ID="txtEstado" Text="Estado" runat="server" /> <br />
-        <asp:DropDownList ID="drpEstado" runat="server" >
+        <asp:DropDownList ID="drpEstado" runat="server" AutoPostBack="true" DataTextField="DescEstado" DataValueField="IdEstado">
             <asp:ListItem Text="Selecione"/>
         </asp:DropDownList><br />
-        <asp:Label ID="txtCidade" Text="Cidade" runat="server" /><br />
-        <asp:DropDownList ID="drpCidade" Visible="false" runat="server" >
+        <asp:Label ID="txtCidade" Text="Cidade" runat="server" Visible="false"/><br />
+        <asp:DropDownList ID="drpCidade" Visible="false" runat="server" DataTextField="DescCidade">
         </asp:DropDownList>
         
     </div>

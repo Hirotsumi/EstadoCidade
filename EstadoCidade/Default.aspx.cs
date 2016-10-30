@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using br.ucb.Biblioteca.Model;
+using br.ucb.Biblioteca.DTO;
 
 namespace EstadoCidade
 {
@@ -21,6 +22,9 @@ namespace EstadoCidade
             if (!Page.IsPostBack)
             {
                 preencherDropDownEstado();
+            }else
+            {
+                preencherDropDownCidade();
             }
         }
 
@@ -28,13 +32,24 @@ namespace EstadoCidade
         {
             drpEstado.DataSource = estadoModel.listarEstados();
             drpEstado.DataBind();
-            if (!drpEstado.SelectedItem.Text.Equals("Selecione"))
-                preencherDropDownCidade(drpEstado.SelectedItem);
+            drpEstado.Items.Insert(0, "Selecione");
         }
 
-        protected void preencherDropDownCidade(ListItem item)
+        protected void preencherDropDownCidade()
         {
-
+            if (!drpEstado.SelectedItem.Text.Equals("Selecione"))
+            {
+                drpCidade.Visible = true;
+                txtCidade.Visible = true;
+                EstadoDTO dto = new EstadoDTO();
+                dto.idEstado = Convert.ToInt64(drpEstado.SelectedItem.Value);
+                drpCidade.DataSource = cidadeModel.listarCidadesPorEstado(dto);
+                drpCidade.DataBind();
+            }else
+            {
+                drpCidade.Visible = false;
+                txtCidade.Visible = false;
+            }
         }
     }
 }

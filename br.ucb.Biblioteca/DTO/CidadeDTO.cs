@@ -8,8 +8,8 @@ namespace br.ucb.Biblioteca.DTO
 {
     public class CidadeDTO
     {
-        public int idCidade { get; set; }
-        public int idEstado { get; set; }
+        public long idCidade { get; set; }
+        public long idEstado { get; set; }
         public string DescCidade { get; set; }
     }
 }

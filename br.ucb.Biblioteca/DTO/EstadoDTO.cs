@@ -8,7 +8,7 @@ namespace br.ucb.Biblioteca.DTO
 {
     public class EstadoDTO
     {
-        public int idEstado { get; set; }
+        public long idEstado { get; set; }
         public string DescEstado { get; set; }
     }
 }

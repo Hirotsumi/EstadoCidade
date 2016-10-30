@@ -18,7 +18,7 @@ namespace br.ucb.Biblioteca.DAO
                 try
                 {
                     conn.Open();
-                    var sql = "SELECT Id, DescEstado FROM Estados ORDER BY DescEstado";
+                    var sql = "SELECT IdEstado, DescEstado FROM Estados ORDER BY DescEstado";
                     SqlCommand command = new SqlCommand(sql,conn);
                     command.CommandType = CommandType.Text;
                     DataSet dtSet = new DataSet();
