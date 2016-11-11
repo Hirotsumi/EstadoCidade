@@ -13,6 +13,24 @@ namespace EstadoCidade {
     public partial class _Default {
         
         /// <summary>
+        /// mainTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table mainTable;
+        
+        /// <summary>
+        /// rowEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow rowEstado;
+        
+        /// <summary>
         /// txtEstado control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,15 @@ namespace EstadoCidade {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drpEstado;
+        
+        /// <summary>
+        /// rowCidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow rowCidade;
         
         /// <summary>
         /// txtCidade control.
